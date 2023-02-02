@@ -1,0 +1,8 @@
+package mytest;
+
+public class ModelUse {
+
+	public static void main(String[] args) {
+		
+	}
+}

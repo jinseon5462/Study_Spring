@@ -1,0 +1,13 @@
+package com.example.mybatis.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class MyController {
+	
+	public @ResponseBody String root() {
+		
+		return "Mybatis 연습";
+	}
+}

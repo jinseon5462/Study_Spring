@@ -1,0 +1,29 @@
+package com.example.model;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class MyController {
+	
+	@GetMapping("/")
+	public @ResponseBody String root() {
+		return "Ex06 model...";
+	}
+	
+	@GetMapping("/index")
+	public void index() {
+		
+	}
+	
+	@GetMapping("/test1")
+	public String test1(Model model) {
+		model.addAttribute("name", "홍길동");
+		
+		return "test1";
+	}
+	
+	
+}

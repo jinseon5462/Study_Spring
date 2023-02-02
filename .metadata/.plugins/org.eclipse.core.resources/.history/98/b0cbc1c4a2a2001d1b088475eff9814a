@@ -1,0 +1,5 @@
+package com.example.mybatis.mapper;
+
+public interface UserMapper {
+	public void insert(UserVO user);
+}
