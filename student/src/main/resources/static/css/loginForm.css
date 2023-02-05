@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.login_box{
+	width: 400px;
+	height: 250px;
+	border: solid 3px gray;
+	margin: 200px auto;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 10px 10px 10px black;
+}
+
+h1{
+	margin-bottom: 20px;
+}
+
+#id{
+	width: 200px;
+	border: none;
+	border-bottom: solid 3px gray;
+	outline: none;
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+	margin-bottom: 30px;
+}
+
+#pw{
+	width: 200px;
+	border: none;
+	border-bottom: solid 3px gray;
+	outline: none;
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+	margin-bottom: 30px;
+}
+
+#id:hover{
+	border-bottom: 3px solid black;
+}
+
+#pw:hover{
+	border-bottom: 3px solid black;
+}
+
+#resetBtn{
+	width: 50px;
+	height: 30px;
+	cursor: pointer;
+	font-weight: bold;
+	background: none;
+	border: solid 3px gray;
+	border-radius: 10px;
+}
+
+#loginDoBtn{
+	width: 50px;
+	height: 30px;
+	cursor: pointer;
+	font-weight: bold;
+	background: none;
+	border: solid 3px gray;
+	border-radius: 10px;
+}
+#resetBtn:hover{
+	border: solid 3px black;
+}
+
+#loginDoBtn:hover{
+	border: solid 3px black;
+}

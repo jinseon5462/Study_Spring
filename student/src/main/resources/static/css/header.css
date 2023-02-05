@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+	list-style-type: none;
+	text-decoration: none;
+}
+.container{
+	width: 1300px;
+	height: 1000px;
+	margin: 0 auto;
+}
+header{
+	width: 1300px;
+	height: 103px;
+	border-bottom: 1px solid gray;
+	display: flex;
+}
+header > img {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+#nav_bar {
+	width: 1000px;
+}
+#nav_bar > ul{
+	display: flex;
+	justify-content: center;
+}
+
+#nav_bar > ul > li{
+	line-height: 100px;
+	width: 100px;
+	margin: 0 50px;
+	font-weight: bold;
+	font-size: 20px;
+	color: gray;
+	cursor: pointer;
+}
+#nav_bar > ul > li:hover{
+	border-bottom: 3px solid #00138f;
+	color: black;
+}
+
+.buttons{
+	line-height: 100px;
+	margin: 0 auto;
+}
+
+#loginBtn{
+	width: 60px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	background-color: #00138f;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+#signUpBtn{
+	width: 60px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: 2px solid gainsboro;
+	font-weight: bold;
+	border-radius: 10px;
+}
+#myPageBtn{
+	width: 60px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	background-color: #00138f;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+#logoutBtn{
+	width: 60px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: 2px solid gainsboro;
+	font-weight: bold;
+	border-radius: 10px;
+}

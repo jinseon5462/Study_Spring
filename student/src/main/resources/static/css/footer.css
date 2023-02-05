@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+footer{
+	width: 1300px;
+	height: 150px;
+	padding: 10px;
+	color: gray;
+	border-top: 1px solid gray;
+}
+footer > .first_line_ul{
+	display: flex;
+	margin-bottom: 20px;
+}
+footer > .first_line_ul > li{
+	margin-right: 20px;
+}
+
+footer > .second_line_ul{
+	display: flex;
+}
+
+footer > .second_line_ul > li{
+	margin-right: 20px;
+}
+
+.copyright{
+	text-align: left;
+	margin-right: 10px;
+}

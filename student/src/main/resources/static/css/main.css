@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+	list-style-type: none;
+}
+
+main{
+	width: 1300px;
+	height: 800px;
+}
