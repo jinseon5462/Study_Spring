@@ -13,21 +13,33 @@
 <table border="1">
 	<thead>
 		<tr>
-			<th>순번</th><th>아이디</th><th>이름</th><th>연락처</th><th>수정</th><th>삭제</th>
+			<th>아이디</th><th>비밀번호</th><th>이름</th><th>연락처</th>
 		</tr>
 	</thead>
 	<tbody>
-	<c:forEach var="user" items="${list }" varStatus="status">
-		<tr>
-			<td>${status.count }</td>
-			<td>${user.id }</td>
-			<td>${user.name }</td>
-			<td>${user.tel }</td>
-			<td><input type="button" id="updateBtn" value="수정" onclick="location.href='updateForm?id=${user.id}'"></td>
-			<td><input type="button" id="deleteBtn" value="삭제" onclick="location.href='delete.do?id=${user.id}'"></td>
-		</tr>
-	</c:forEach>
 	</tbody>
 </table>
+<script>
+	getList();
+	function getList(){
+		const xhttp = new XMLHttpRequest();
+		xhttp.onload = function(){
+			let data = this.responseText;
+			let obj = JSON.parse(data);
+			let tbody = document.querySelector("tbody");
+			for(let i = 0; i < obj.length; i++){
+				tbody.innerHTML +=
+					"<tr>"
+					+ "<td>" + obj[i].id + "</td>"
+					+ "<td>" + obj[i].pw + "</td>"
+					+ "<td>" + obj[i].name + "</td>"
+					+ "<td>" + obj[i].tel + "</td>"
+					+ "<tr>";
+			}
+		}
+		xhttp.open("get", "/getList.do", true);
+		xhttp.send();
+	}
+</script>
 </body>
 </html>

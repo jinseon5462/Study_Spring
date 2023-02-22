@@ -9,6 +9,6 @@
 <body>
 <h1>Index Page</h1>
 <hr>
-
+<a href="/list">리스트</a>
 </body>
 </html>

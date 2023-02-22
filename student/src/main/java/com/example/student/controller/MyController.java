@@ -1,5 +1,7 @@
 package com.example.student.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -70,5 +72,30 @@ public class MyController {
 	public String logoutDo(HttpSession session) {
 		session.invalidate();
 		return "/index";
+	}
+	
+	@GetMapping("/list")
+	public @ResponseBody ArrayList<StudentVO> getList(){
+		ArrayList<StudentVO> list = new ArrayList<>();
+		StudentVO student1 = new StudentVO();
+		student1.setId("lee1");
+		student1.setPw("1111");
+		student1.setName("이진선1");
+		student1.setTel("0101");
+		StudentVO student2 = new StudentVO();
+		student2.setId("lee2");
+		student2.setPw("11112");
+		student2.setName("이진선2");
+		student2.setTel("0102");
+		StudentVO student3 = new StudentVO();
+		student3.setId("lee3");
+		student3.setPw("11113");
+		student3.setName("이진선3");
+		student3.setTel("0103");
+		
+		list.add(student1);
+		list.add(student2);
+		list.add(student3);
+		return list;
 	}
 }

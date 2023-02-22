@@ -1,6 +1,6 @@
 package com.example.mybatis.controller;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ public class MyController {
 	
 	@GetMapping("/")
 	public @ResponseBody String root() {
-		return "Mybatis 연습";
+		return "redirect:list";
 	}
 	
 	@GetMapping("/index")
@@ -34,11 +34,13 @@ public class MyController {
 		mapper.insert(user);
 		return "redirect:list";
 	}
+	@GetMapping("/list")
+	public void goList() {}
 	
-	@GetMapping("/list")	// http://localhost:8081/list
-	public void list(Model model) {
-		List<UserVO> list = mapper.getList();
-		model.addAttribute("list", list);
+	@GetMapping("/getList.do")	// http://localhost:8081/list
+	public @ResponseBody ArrayList<UserVO> list() {
+		ArrayList<UserVO> list = mapper.getList();
+		return list;
 	}
 	@GetMapping("/updateForm")
 	public void updateForm(String id, Model model) {
