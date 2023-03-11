@@ -18,7 +18,7 @@ public class MyController {
 	@GetMapping("/")
 	@ResponseBody
 	public String root() {
-		return "Transaction 연습1";
+		return "Transaction Manager 연습2";
 	}
 	
 	@GetMapping("/buy_ticket")
